@@ -1,5 +1,5 @@
 #!/bin/bash
-
+date
 sudo yum install -y tomcat
 cd /opt/apache-tomcat-8.5.53/webapps/
 aws s3 cp s3://archni/archnibuild/target/DemoPipelineJava-0.0.1-SNAPSHOT.war .
