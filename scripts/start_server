@@ -3,3 +3,6 @@
 sudo yum install -y tomcat
 cd /opt/apache-tomcat-8.5.53/webapps/
 aws s3 cp s3://archni/archnibuild/target/DemoPipelineJava-0.0.1-SNAPSHOT.war .
+cd /root/arachni-1.5.1-0.5.12/bin
+./arachni http://18.182.42.213:8090/DemoPipelineJava-0.0.1-SNAPSHOT/ --checks=xss* --report-save-path=3.afr
+./arachni_reporter 3.afr --reporter=html:outfile=my_report_new.html.zip
